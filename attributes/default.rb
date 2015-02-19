@@ -42,3 +42,5 @@ default['chef_server12']['organization_private_key'] = \
    "#{node['chef_server12']['organization']}-validator.pem"
 default['chef_server12']['organization_private_key_path'] = \
    File.join('/tmp', node['chef_server12']['organization_private_key'])
+# Option to bootstrap test nodes
+default['chef_server12']['create_nodes'] = false

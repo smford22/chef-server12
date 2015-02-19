@@ -12,10 +12,7 @@ provisioner:
   name: chef_solo
 
 platforms:
-  - name: centos65
-    driver:
-      box: box-cutter/centos65
-      box_url: box-cutter/centos65
+  - name: centos-6.5
     attributes:
       chef_server12:
         topology: 'standalone'
@@ -30,10 +27,8 @@ platforms:
           node1.vagrantup.com: "<%= chef_node1_ip %>"
           node2.vagrantup.com: "<%= chef_node2_ip %>"
 
-  - name: ubuntu1404
+  - name: ubuntu-14.04
     driver:
-      box: box-cutter/ubuntu1404
-      box_url: box-cutter/ubuntu1404
     attributes:
       chef_server12:
         topology: 'standalone'
