@@ -37,3 +37,17 @@ end
 node['chef_server12']['feature'].each do |name, enabled|
   install_feature name if enabled
 end
+
+execute 'reconfigure-chef-manage' do
+  command 'opscode-manage-ctl reconfigure'
+  action :nothing
+end
+
+template '/etc/opscode-manage/manage.rb' do
+  source 'manage.rb.erb'
+  owner 'root'
+  group 'root'
+  mode '0644'
+  notifies :run, 'execute[reconfigure-chef-manage]'
+end
+

@@ -44,3 +44,4 @@ default['chef_server12']['organization_private_key_path'] = \
    File.join('/tmp', node['chef_server12']['organization_private_key'])
 # Option to bootstrap test nodes
 default['chef_server12']['create_nodes'] = false
+default['chef_server12']['manage']['disable_sign_up'] = false

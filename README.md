@@ -94,6 +94,7 @@ org_private_key_path   | Local path where a copy of organization validation key 
 topology               | Installation cluster topology.  Possible values are `standalone`, `tiered` or `ha`. | String | 'standalone'
 version                | Chef Server version to install. This value is ignored if `package_file` is set. | String | :latest
 write_hosts            | Generate `/etc/hosts` file on nodes with values from `backend` and `nodes` attributes. | Boolean | false
+manage.disable_sign_ups | If set to true, web sign-ups for the Chef Server are disabled | Boolean | false
 
 Recipes
 =======
