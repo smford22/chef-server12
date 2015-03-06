@@ -1,15 +1,15 @@
 case node['platform_family']
 when 'rhel'
   default['chef_server12']['url'] = \
-    'https://web-dl.packagecloud.io/chef/stable/packages/el/6'\
-    '/chef-server-core-12.0.3-1.x86_64.rpm'
+    'https://web-dl.packagecloud.io/chef/stable/packages/el/6/'\
+    'chef-server-core-12.0.5-1.el6.x86_64.rpm'
   default['chef_server12']['analytics_url'] = \
     'https://web-dl.packagecloud.io/chef/stable/packages/el/6'\
     '/opscode-analytics-1.1.1-1.x86_64.rpm'
 when 'debian'
   default['chef_server12']['url'] = \
     'https://web-dl.packagecloud.io/chef/stable/packages/ubuntu/trusty'\
-    '/chef-server-core_12.0.3-1_amd64.deb'
+    '/chef-server-core_12.0.5-1_amd64.deb'
   default['chef_server12']['analytics_url'] = \
     'https://web-dl.packagecloud.io/chef/stable/packages/ubuntu/precise'\
     '/opscode-analytics_1.1.1-1_amd64.deb'
