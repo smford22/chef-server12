@@ -1,5 +1,5 @@
-include_recipe 'chef_server12::_add_server_to_authorized_keys'
-include_recipe 'chef_server12::_configure_analytics_dns' \
+include_recipe 'chef-server12::_add_server_to_authorized_keys'
+include_recipe 'chef-server12::_configure_analytics_dns' \
   if node['chef_server12']['write_hosts']
 
 analytics_fqdn = node['chef_server12']['backend']['analytics_fqdn']
